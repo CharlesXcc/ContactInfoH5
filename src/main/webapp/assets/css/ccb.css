@@ -1,0 +1,295 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ccb */
+.ccb-btn-bg {
+  background: #0065b3;
+}
+
+.ccb-p-header {
+  background: #4c9ee8;
+  padding: 0 0.3rem 0.2rem;
+}
+
+.p-header-box {
+  padding: 0.5rem 0;
+}
+
+.p-header-box .p-center {
+  text-align: center;
+  color: #f5f5f5;
+  font-size: 0.28rem;
+}
+
+.p-header-box .money-num {
+  line-height: 1rem;
+  font-size: 0.4rem;
+  color: #f9c402;
+}
+
+.p-h-title {
+  border-top: 1px dashed #f5f5f5;
+  line-height: 0.8rem;
+  color: #f5f5f5;
+  font-size: 0.28rem;
+}
+
+.ccb-p-sectionO {
+  margin-top: 0.2rem;
+  background: #fff;
+  padding: 0.3rem 0 0.6rem 0;
+}
+
+.ccb-p-sectionO .hbox-list li {
+  color: #186cac;
+}
+
+.p-sectionO-title {
+  line-height: 1rem;
+  font-size: 0.3rem;
+  padding-left: 0.5rem;
+  color: #186cac;
+}
+
+.ccb-p-sectionO .hbox-list-icon {
+  margin-top: 0;
+}
+
+.ccb-p-sectionT {
+  margin-top: 0.2rem;
+}
+
+.p-sectionT-ccbIcon {
+  background: url(../images/ccb-icon.jpg) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 1.4rem;
+}
+
+.Hp-sectionT-ccbIcon {
+  background: url(../images/house-icon.jpg) no-repeat;
+  background-size: cover;
+}
+
+.ccb-camera-box {
+  background: #c9e4ff;
+  color: #2a89c1;
+}
+
+.ccb-set .supplementary-information-box .input-set label {
+  width: 28%;
+}
+
+.ccb-set .supplementary-information-box .input-set input {
+  padding-left: 0.3rem;
+}
+
+.ccb-set .supplementary-information-box .input-set .ccb-ipt-lg {
+  width: 72%;
+}
+
+.ccb-modal-content {
+  overflow: auto;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.ccb-modal-position {
+  height: 4.8rem;
+  margin-top: -2.4rem;
+  padding-bottom: 0.3rem;
+}
+
+.ccb-imgCapture-box {
+  background: #fff;
+  margin-bottom: 0.2rem;
+  padding: 0.2rem 0.5rem;
+}
+
+.ccb-imgBox-title {
+  font-size: 0.26rem;
+  color: #508dc4;
+  margin-bottom: 0.3rem;
+}
+
+.ccb-imgCapture-list li {
+  float: left;
+  width: 1.16rem;
+  height: 1.16rem;
+  border: 1px dashed #ccc;
+  margin-right: 0.15rem;
+  margin-bottom: 0.15rem;
+  position: relative;
+}
+
+.click-modal-a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.ccb-imgCapture-list li:nth-child(5n) {
+  margin-right: 0;
+}
+
+.del-image {
+  padding: 0 12px;
+}
+
+.supplementary-information-box .detailed_address {
+  /*padding-top:0.25rem;*/
+}
+
+.supplementary-information-box .detailed_address input {
+  padding-left: 0 !important;
+  border: 1px solid #f2f2f2;
+  height: 0.5rem;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 0.5rem;
+}
+
+.supplementary-information-box .detailed_address input:nth-child(1) {
+  font-size: 13px;
+}
+
+.supplementary-information-box .detailed_address span {
+  height: 0.5rem;
+  line-height: 0.5rem;
+  text-align: center;
+  font-size: 14px;
+  color: #868686;
+}
+
+.supplementary-information-box .placeholder-set input {
+  /*padding-left:0!important;*/
+  border: 1px solid #f2f2f2;
+  height: 0.5rem;
+  line-height: 0.5rem;
+}
+
+.supplementary-information-box .input-set div {
+  color: #626262;
+}
+
+.car-hbox-list li {
+  width: 50%;
+  padding: 0.4rem;
+}
+
+.car-hbox-list li:first-child {
+  border-right: 1px solid #f2f2f2;
+}
+
+.car-title {
+  font-size: 0.28rem;
+  color: #3b3b3b;
+  margin-bottom: 0.3rem;
+  text-align: center;
+}
+
+.car-p {
+  color: #909090;
+  font-size: 0.28rem;
+}
+
+.car-btn {
+  display: block;
+  width: 2rem;
+  height: 0.5rem;
+  border: 1px solid #206bad;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 0.5rem;
+  color: #206bad;
+  font-soze: 0.28rem;
+  margin: auto;
+  margin-top: 0.5rem;
+}
+
+.select_style {
+  width: 40%;
+  background: #f2f2f2;
+  margin-top: 0.23rem;
+  border: 1px solid #ccc;
+  font-size:0.26rem;
+  margin-left: 0.3rem;
+}
+
+.ccb-camera-box .btn-position-ab {
+  font-size: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-indent: -999rem;
+  opacity: 0;
+}
+
+.index-merchant-name {
+  background: #fff;
+  padding: 0.5rem 0.5rem;
+  text-align: center;
+  color: #186cac;
+  margin-top:  0.2rem;
+}
+
+
+.fonts-title{
+    width: 70%;
+    margin:auto;
+}
+
+.certificate-authorization{
+	padding:0 0.24rem;
+	color:#333;
+	padding-bottom:0.5rem;
+}
+.authorization-title{
+	height:0.8rem;
+	line-height:0.8rem;
+	text-align:center;
+	font-size:0.28rem;
+	padding-top:0.1rem;
+}
+
+.authorization-mainBox-title,.authorization-mainBox .p1{
+	font-size:0.26rem;
+	line-height:0.4rem;
+	text-indent:2em;
+}
+.authorization-mainBox-title{
+	line-height:0.6rem;
+}
+
+
+
+.del-image-box{
+	position:fixed;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	z-index:99999;
+	display:none;
+}
+.del-image-btnBox{
+	background:#b4d3f3;
+	width:6rem;
+	height:3rem;
+	margin:3rem auto;
+	border-radius:8px;
+}
+.yesNo{
+	height:1rem;
+	line-height:1rem;
+	font-size:0.32rem;
+	color:#333;
+	text-align:center;
+}
+
+
+

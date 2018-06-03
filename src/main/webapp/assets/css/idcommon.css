@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* CSS Document */
+body,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,p,strong,i,b{font-weight:normal;font-style:normal;margin:0;padding:0;font-family:"微软雅黑";}
+em{font-style:normal;}
+li{list-style:none;}
+a{text-decoration:none;}
+img{display:block;border:none;}
+
+.clearfix{zoom:1}
+.clearfix:after{content:""; display:block; clear:both;}
+
+.fl{float:left;}
+.fr{float:right;}
+
+label{
+    font-weight:normal;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #c4c4c4; opacity:1; 
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #c4c4c4;opacity:1;
+}
+
+input:-ms-input-placeholder{
+    color: #c4c4c4;opacity:1;
+}
+
+input::-webkit-input-placeholder{
+    color: #c4c4c4;opacity:1;
+}
+
+.rdo {
+    width: 20px;
+    background-color: #000;
+    margin-right: 30px;
+    border-radius: 50%;
+    position: relative;
+    top:3px;
+}
+.rdo:before,.rdo:after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    transition: .3s ease;
+}
+.rdo:before {
+    top: 0px;
+    left: 0px;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border: 1px solid #b0b0b0;
+}
+.rdo:after {
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    background-color: #fff; 
+}
+.rdo:checked:after {
+    top: 3px;
+    left: 3px;
+    width: 12px;
+    height: 12px;
+    background-color:#619ae9; 
+}
+.rdo:checked:before {
+    border-color:#619ae9; 
+}
+
+

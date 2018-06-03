@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0">
+  <title>身份确认(1/6)</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap3.3.6.min.css">
+  <link rel="stylesheet" href="assets/css/idcommon.css">
+  <link rel="stylesheet" href="assets/css/idupload.css">
+  <link rel="stylesheet" href="assets/css/ccb.css">
+</head>
+
+<body style="background:#ececec;padding-bottom:0.5rem;">
+
+<section class="get-quota-card">
+  <h4 class="new-title">请拍摄上传身份证正反面照片</h4>
+  <div class="card-box">
+    <div class="card-box-div front-card">
+      <div class="img-box">
+        <img src="assets/img/front-card.png" id="id_face_img">
+        <div class="camera-box ccb-camera-box">
+          <i class="glyphicon glyphicon-camera"></i>
+          <input type="file" class="btn-position-ab" capture="camera" accept="image/*" name="id_face_camera">
+        </div>
+      </div>
+    </div>
+    <div class="card-box-div back-card">
+      <div class="img-box">
+        <img src="assets/img/back-card.png" id="id_back_camera">
+        <div class="camera-box ccb-camera-box" id="back_input_box">
+          <i class="glyphicon glyphicon-camera"></i>
+          <input id="back_input" class="btn-position-ab" type="text" capture="camera" accept="image/*" name="id_back_camera" disabled="">
+        </div>      
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="card-information">
+  <div class="form-set">
+    <form style="display:none;" id="id_info">
+      <div class="input-set input-set-botbord clearfix">
+        <label class="fl">姓名</label>
+        <input class="fl password-retrieval-input idNoInput" type="text" id="realName">
+        <!--<a class="fr">修改</a>-->
+      </div>
+      <div class="input-set mar-top clearfix">
+        <label class="fl">身份证号</label>
+        <input class="fl idNoInput" type="tel" id="idCardNo">
+        <!--<a class="fr">修改</a>-->
+      </div>
+      <div class="user-agreement-set">
+        <div class="user-agreement-box">
+          <input type="checkbox" class="checkbox" id="agree" name="agree">
+          阅读并同意<a class="user-agreement" data-toggle="modal" data-target="#find_myModal" href="http://credit.jdongtech.com:8090/page/house/ccbH-identification.html" onclick="return false;">《个人征信等信息查询及使用授权书》</a>
+        </div>
+      </div>
+    </form>
+    <div class="button-set">
+      <a class="form-submit ccb-btn-bg" href="javascript:next()">下一步</a>
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="find_myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document" style="margin:0;">
+		<div class="modal-content" style="background:#ececec;border:none;border-radius:0;height:100%;">
+			<section class="certificate-authorization">
+				<h2 class="authorization-title">龙卡信用卡租金分期付款业务约定条款</h2>
+				<div class="authorization-mainBox">
+					<h3 class="authorization-mainBox-title">一、基本规定</h3>
+					<p class="p1">
+						1.中国建设银行龙卡信用卡租金分期付款业务是指客户因租赁房屋，向我行申请龙卡信用卡专项分期额度用于在我行指定合作商户租赁房屋居住，经我行审批同意，并核实用途真实性后实际发放额度，
+						由客户分期还款并按约定支付手续费的业务。
+					</p>
+					<p class="p1">
+						2.本申请表所指的龙卡信用卡是指由中国建设银行发行的信用卡(商务卡、学生卡、附属卡、担保卡除外)。
+					</p>
+				</div>
+				
+				<div class="authorization-mainBox">
+					<h3 class="authorization-mainBox-title">二、申请人权利和义务</h3>
+		
+					<p class="p1">
+						1.申请人按龙卡信用卡对账单所列示金额按期归还欠款。申请人在到期还款日前全额归还账单列示的当期应还款额时，当期租金分期应还本金可享受免息期；申请人在到期还款日前未按账单列示全额还款，
+						当期租金分期应还本金从当期账单日计收利息。租金分期手续费及每期应还本金金额在账单日入账并计入当期最低还款额，如未按账单列示归还最低还款额，另按信用卡领用协议计收滞纳金。
+					</p>
+					
+					<p class="p1">
+						2.申请人按月还款后仍有多余款项时，该款项不能用于提前清偿分期付款剩余本金。
+					
+					</p>
+					<p class="p1">
+						3.申请人已成功办理龙卡信用卡租金分期付款业务，如申请提前还款，须一次性支付剩余本金，约定的手续费不予退还。
+					</p>
+					<p class="p1">
+						4.商户同意申请人退货的，中国建设银行仅将相应款项退回至原交易信用卡账户，若退款金额超过交易总金额的10%，中国建设银行将根据实际欠款金额和剩余期数，重新安排分期还款金额及还款期数，已收取的手续费不予退还。
+					</p>
+					<p class="p1">
+						5.申请人承诺在消费后无论发生何种风险状况，应按期归还中国建设银行龙卡信用卡透支款项，否则，中国建设银行有权采取一切法律法规允许的手段追偿欠款。
+					</p>
+					
+					<p class="p1">
+						6.申请人承诺审批所获分期额度仅在指定租金商户使用，不用于其他用途，不通过虚假交易等欺诈活动套取现金。如有上述行为，中国建设银行有权要求申请人一次性偿还全部欠款，包括但不限于本金、手续费、利息、滞纳金等全部应还款项。
+					</p>
+					<p class="p1">
+						7.若申请人的龙卡信用卡被停卡或发生其他中国建设银行认为申请人债务履行能力或其他信用程度降低（中国建设银行拥有“信用程度降低”的自主判断权利）、申请人发生债务不履行、申请销户、主动要求停卡或申请人违反中国建设银行相关规定时，
+						无须经中国建设银行特别告知，申请人的分期付款债务应于发生上述事项之时视为全部到期，申请人应当一次性偿还全部剩余欠款，包括但不限于本金、手续费、利息、滞纳金等全部应还款项。
+					</p>
+					<p class="p1">
+						8.申请人不可将租金分期每期应还本金金额再次申请分期。
+					</p>
+					<p class="p1">
+						9.申请人清楚知悉并同意龙卡信用卡租金分期付款申请人约定条款，如实填写、签署本《龙卡信用卡租金分期业务申请表》。
+					</p>
+					
+				</div>
+				
+				<div class="authorization-mainBox">
+					<h3 class="authorization-mainBox-title">三、银行权利和义务</h3>
+		
+					<p class="p1">
+						1. 申请人保证向中国建设银行提供的所有申请资料真实、准确、完整，授权中国建设银行将包含申请人不良信息在内的申请人的个人信用信息提供给中国人民银行金融信用信息基础数据库、信贷征信主管部门批准建立的个人信用数据库，
+						授权中国建设银行向中国人民银行金融信用信息基础数据库、信贷征信主管部门批准建立的个人信用数据库、有关单位、部门及个人了解和查询申请人身份、财产、资信和其他有关情况，所查得的征信信息仅用于信贷审批、贷后管理、资信核查、异议处理等相关银行业务。
+						中国建设银行应对申请人有关个人资料予以保密，但个人征信使用、法律法规和规章另有规定或双方另有约定的除外。
+					</p>
+					<p class="p1">
+						2.中国建设银行将保留审批和分期额度授予的最终决定权。
+					</p>
+					<p class="p1">
+						3.中国建设银行根据经申请人本人签名的《龙卡信用卡分期业务交易授权书》上的分期付款金额向指定分期商户垫付款项，形成申请人的分期付款债务。
+					</p>
+					<p class="p1">
+						4.中国建设银行将于申请人完成交易后首个账单日起，在申请人龙卡信用卡账户上分期扣除分期付款金额，并由申请人承担还款责任。
+					</p>
+					<p class="p1">
+						5.中国建设银行有权依据国家有关规定及业务需要对本业务条款及费用标准进行变更，或对本业务进行延迟或提前终止，上述调整以网点、网站、电子银行等方式对外公告，不再另行通知申请人。自公告施行之日公告内容构成对建设银行与申请人间协议约定的有效修改和补充。
+						如果申请人不同意接受建设银行的调整内容，可根据建设银行的业务规则申请终止租金分期业务服务。不申请终止服务的，视为接受建设银行的相关调整。若申请人既不申请终止服务，也不执行调整后的规则，则银行有权选择终止本协议，
+						并要求申请人一次性偿还全部剩余款项及相应利息、滞纳金。
+					</p>
+					
+				</div>
+				
+				<div class="authorization-mainBox">
+					<h3 class="authorization-mainBox-title">四、其他</h3>
+					<p class="p1">
+						1.租金分期每期应还本金金额在账单日入账。每期应还本金金额等于分期本金总额除以期数。每期应还本金金额计算精确到分位，对于分期本金金额不能被期数整除的，采用四舍五入的方式进行金额拆分，差额在最后一期进行调整。
+						约定的手续费在完成交易后首个账单日一次性入账并全额记入信用卡最低还款额。
+					</p>
+					<p class="p1">
+						2.龙卡信用卡租金分期付款业务的利息、滞纳金等计算规则以及其他未尽事宜依据《中国建设银行龙卡信用卡章程》、《中国建设银行龙卡信用卡申领协议》及其他业务规定执行。
+					</p>
+					<p class="p1">
+						3.有关商品价格、服务质量、合同履行等事宜均由分期商户提供，若申请人与分期商户之间就商品和服务等相关事宜发生争议，申请人应与分期商户协商处理。在争议处理过程中，申请人应继续偿还所欠分期付款债务。
+						申请人不能以与分期商户发生纠纷为由拒绝支付所欠中国建设银行分期付款债务。对于办理了租金分期的申请人，如发生退租或者逾期情况，分期商户须提供代偿承诺且在相关租房协议中明确，同时建立资金闭环代偿机制，由分期商户代偿申请人分期剩余本金。
+					</p>
+					<p class="p1">
+						3.有关商品价格、服务质量、合同履行等事宜均由分期商户提供，若申请人与分期商户之间就商品和服务等相关事宜发生争议，申请人应与分期商户协商处理。在争议处理过程中，申请人应继续偿还所欠分期付款债务。
+						申请人不能以与分期商户发生纠纷为由拒绝支付所欠中国建设银行分期付款债务。对于办理了租金分期的申请人，如发生退租或者逾期情况，分期商户须提供代偿承诺且在相关租房协议中明确，同时建立资金闭环代偿机制，由分期商户代偿申请人分期剩余本金。
+					</p>
+				</div>
+				
+				 <div class="button-set">
+			       <a class="form-submit ccb-btn-bg" data-dismiss="modal" aria-label="Close" style="margin-top:0.5rem;">返回</a>
+			    </div>
+				
+			 
+			</section>				
+		</div>
+	</div>
+</div>
+
+
+<script src="assets/js/jquery.2.4.1.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/idindex.js"></script>
+<script src="assets/js/lrz.all.bundle.js"></script>
+<script>
+	$('.idNoInput').on('focus', function () {
+		
+	    var target = this;
+	    // 使用定时器是为了让输入框上滑时更加自然
+	    setTimeout(function(){
+	      target.scrollIntoView(true);
+	      target.scrollIntoViewIfNeeded();
+	    },200);
+	});
+
+
+  var faceFlag = false;
+  var backFlag = false;
+
+  $('input[name=id_face_camera]').on("change", function () {
+    fs = this.files[0];
+    var sThis = this;
+    var url = (window.URL || window.webkitURL).createObjectURL(fs);
+	alert("URL" + url)
+    alert("开始上传图片！");
+    lrz(this.files[0]).then(function (rst) {
+      var img = new Image();
+      alert("rst" + rst.base64);
+      alert("rst" + rst);
+      img.src = rst.base64;
+      alert("img" + img.src);
+      addLoading();
+      $.ajax({
+    	type: 'POST',
+        url: '/contact/IdCardFront',
+        contentType: 'application/json; charset=utf-8',
+        dataType:"json",
+        data: JSON.stringify({
+            'img': rst.base64,
+          }),
+        success: function (data) {
+          if (!data.error) {
+				$("#id_face_img").attr("src", url);
+				alert("url", url)
+	            //$("#realName").val(data.result.realName);
+	            //$("#idCardNo").val(data.result.idCardNo);
+	            $("#realName").val("name");
+	            $("#idCardNo").val("idCardNo");
+	            document.getElementById("id_info").style.display = "block";
+	            faceFlag = true;
+	            $('#back_input').attr('type','file');
+	            $('#back_input').removeAttr('disabled');
+          } else {
+            alert(data.message);
+          }
+          removeLoading();
+        }
+      });
+    })
+  });
+  
+  $('#back_input_box').click(function(){
+	  if(!faceFlag){
+		  alert('请先上传身份证人像面');
+	  }else{
+		  return;
+	  }
+  });
+
+  $('input[name=id_back_camera]').on("change", function () {
+    fs = this.files[0];
+    var sThis = this;
+    var url = (window.URL || window.webkitURL).createObjectURL(fs);
+
+    alert("开始上传图片！");
+    lrz(this.files[0]).then(function (rst) {
+      var img = new Image();
+      img.src = rst.base64;
+      alert("img" + img.src);
+      addLoading();
+      $.ajax({
+    	  type: 'POST',
+          url: '/contact/IdCardBack',
+          contentType: 'application/json; charset=utf-8',
+          dataType:"json",
+          data: JSON.stringify({
+              'img': rst.base64,
+            }),
+        //url: "/ccb/h5/api/order/id/card/negative",
+        //type: "POST",
+        //data: {img: rst.base64},
+        success: function (data) {
+          if (!data.error) {
+            //backFlag = true;
+            //alert(data.message);
+            $("#id_back_camera").attr("src", url);
+          } else {
+            alert(data.message);
+          }
+          removeLoading();
+        }
+      });
+    })
+  });
+
+  function next() {
+    if (!faceFlag || !backFlag) {
+      alert("请上传身份证图片");
+      return;
+    }
+    if (!$("#agree").prop("checked")) {
+      alert("请阅读并同意个人征信等信息查询及使用授权书");
+      return;
+    }
+    var realName = $("#realName").val();
+    var idCardNo = $("#idCardNo").val();
+    var regIdNo = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
+    
+    if(!realName){
+    	alert("姓名不能为空");
+    	return;
+    }
+    if(!idCardNo){
+    	alert("身份证号不能为空");
+    	return;
+    }else if(!regIdNo.test(idCardNo)){
+    	alert('身份证号填写有误'); 
+    	return;
+    }
+    addLoading();
+    $.ajax({
+      url: "/ccb/h5/api/order/id/card/commit",
+      type: "POST",
+      data: {
+    	  'realName' : realName,
+    	  'idCardNo' : idCardNo
+      },
+      success: function (data) {
+        if (!data.error) {
+          //alert(data.message);
+		  window.location.href = "ccbH-face-recognition.html";
+        } else {
+          alert(data.message);
+        }
+        removeLoading();
+      }
+    });
+  }
+</script>
+
+</body></html>

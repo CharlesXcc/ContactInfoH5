@@ -1,0 +1,93 @@
+﻿
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>申请办卡</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <!-- CSS -->
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style2.css">
+        <link rel="stylesheet" href="assets/css/sweetalert.min.css">
+        <link rel="stylesheet" href="assets/css/btn.css">
+    </head>
+
+    <body>
+      <div class="register span5">
+      <form name="applyForm"  onsubmit="return false">
+      	<h2>申请办卡<span class="red"><strong></strong></span></h2>
+			<div class="row">
+				<input type="text" name="username" maxlength="10"
+					class="form-control validatebox" data-required
+					data-valid="userName" placeholder="姓名" value="">
+			</div>
+			<div class="row" id="idNumber_div">
+				<input type="text" id="idNumber" name="idnumber" maxlength="18"
+					class="form-control validatebox" data-required
+					data-valid="idNumber" placeholder="身份证号" value="">
+			</div>
+			<div class="row">
+				<input type="tel" name="mobile" maxlength="11"
+					class="form-control validatebox" data-required data-valid="mobile"
+					placeholder="手机号码" value="">
+			</div>
+			<div class="row">
+				<input type="text" name="imgValicode" maxlength="4"
+					class="form-control" placeholder="图片验证码">
+			</div>
+			<div>
+				<input type="tel" name="verificationCode" maxlength="6"
+					class="form-control validatebox" data-required
+					data-valid="verifyCode[6]" placeholder="短信验证码">
+				<span><button class="btn btn-small get-code" onclick="getCode(this)" id="J_getCode">获取验证码</button></span>
+			</div>
+			
+				<div class="form-group">
+<label for="verify" class="col-sm-4 control-label">验证码</label>
+<div class="row">
+<div class="col-sm-1">
+
+<input class="form-control" type="text" id="verify" maxlength="4" name="verify">
+</div>
+<div class="col-sm-1">
+<img border="0" style="cursor:pointer" alt="点击刷新验证码" onclick="getimgcode()" src="/reg/verify/" id="verifyImg">
+</div>
+</div>
+</div>
+			<div class="btn-box">				
+				<button>提交申请</button>
+				<button class="btn btn-small reset-code" id="J_resetCode" style="display:none;"><span id="J_second">60</span>秒后重发</button>
+			</div>
+			
+			<li class="group">
+		<label class="label" for="phone">联系电话：</label>
+		<div class="controls">
+			<input type="text" id="phone" class="txt">
+		</div>
+	</li>
+	<li class="group">
+		<label class="label" for="code">验证码：</label>
+		<div class="controls">
+			<input type="text" id="code" class="txt">
+			<button class="btn btn-small get-code" onclick="getCode(this)" id="J_getCode">获取验证码</button>
+			<button class="btn btn-small reset-code" id="J_resetCode" style="display:none;"><span id="J_second">60</span>秒后重发</button>
+		</div>
+	</li>
+			
+
+		</form>
+            
+    </div>
+		<div align="center"><a href="" target="_blank" title=""></a></div>
+        <script src="assets/js/jquery-1.8.2.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/sweetalert.min.js"></script>
+        <script src="assets/js/validator.js"></script>
+    </body>
+
+</html>
+

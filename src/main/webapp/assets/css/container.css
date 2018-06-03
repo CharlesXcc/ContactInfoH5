@@ -1,0 +1,113 @@
+@charset "UTF-8";
+body {
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 480px;
+}
+a:link,a:visited{ font-style: normal;}
+
+img {
+    border: 0 none;
+    height: auto; 
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.header {
+    color: #d9eef7;
+	border: solid 1px #0076a3;
+    background:#0095cd;
+    height: 60px;
+    position: relative;
+    width: 100%;
+}
+
+.header .title {
+    line-height: 1.5em;
+    text-align: center;
+    font-size: 1.5em;
+    color: #fff;
+    vertical-align: middle;
+    padding: 0.7em 0px;
+    font-family: Microsoft YaHei,'PT Sans', Helvetica, Arial, sans-serif;
+    max-width: 200px;
+    width: 200px;
+    margin: 0px auto;
+    overflow: hidden;
+    height: 22px;
+} 
+
+.header .home{    color: #FFFFFF;
+    display: block;
+    left: 0;
+    padding: 13px 20px;
+    position: absolute;}
+    
+.header .back{    color: #FFFFFF;
+    display: block;
+    right: 0px;
+    top: 0px;
+    padding: 13px 20px;
+    position: absolute;}
+.header .header-icon {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: block;
+    height: 22px;
+    margin: 0 auto;
+    width: 22px;
+}
+
+.header .header-icon-return {
+    background-image: url("../img/icon_return.png");
+}
+.container{  margin: 0 auto;min-height: 300px; width: 100%}
+.width90{width: 90%}
+.width80{width: 80%}
+.width100{width: 100%}
+ .pt20{ padding-top: 20px;}
+.fl{ float: left;}
+.fr{ float: right;}
+.none{ display: none;}
+.copyrights{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
+.tab-pane{display: none}
+.active{ display: block;}
+
+.activitylist {
+    padding: 10px;    
+}
+.activitylist li
+{
+    margin-top: 10px;
+    border-bottom: 1px dashed #CBCFCF;
+}
+.activitylist li p {
+    margin-top: 10px;
+}
+
+.page {
+    color: #000000;
+    text-align: center;
+    height: 24px;
+    margin: 10px auto 0px;
+    padding: 5px 10px;
+    font-size: 13px;
+    width: 300px;
+}
+.page a, .page a:link, .page a:visited {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #DEDFDE;
+    color: #036CB4;
+    line-height: 25px;
+    padding: 2px 6px;
+    text-decoration: none;
+}
+.page a:hover, .currentpage {
+    background: none repeat scroll 0 0 #6BC235;
+    border: 1px solid #F5F5F5;
+    color: #FFFFFF;
+    padding: 2px 6px;
+    text-decoration: none;
+}
+
